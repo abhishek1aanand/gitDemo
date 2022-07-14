@@ -54,3 +54,4 @@ class TestOne(BaseClass):
         log.info(f"Text received from application is {message}")
         assert "Success! Thank you!" in message
         assert "Success" in message
+        assert "Thank" in message
