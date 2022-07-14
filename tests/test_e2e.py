@@ -36,7 +36,7 @@ class TestOne(BaseClass):
         confirmPage.checkoutSecondary().click()
         # self.driver.find_element(By.CSS_SELECTOR, "button[class='btn btn-success']").click()
         log.info("entering country name as India")
-        confirmPage.send_Keys().send_keys("ind")
+        confirmPage.send_Keys().send_keys("indi")
         # self.driver.find_element(By.ID, "country").send_keys("ind")
 
         self.verifyLinkPresence("India")
@@ -49,7 +49,8 @@ class TestOne(BaseClass):
         # self.driver.find_element(By.XPATH, "//label[@for='checkbox2']").click()
         confirmPage.submit_Click().click()
         # self.driver.find_element(By.CSS_SELECTOR, "input[type = 'submit']").click()
-        message =  confirmPage.success_message().text
+        message = confirmPage.success_message().text
         # message = self.driver.find_element(By.CSS_SELECTOR, "div[class='alert alert-success alert-dismissible']").text
         log.info(f"Text received from application is {message}")
         assert "Success! Thank you!" in message
+        assert "Success" in message
